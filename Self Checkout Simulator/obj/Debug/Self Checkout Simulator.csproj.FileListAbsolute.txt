@@ -1,0 +1,86 @@
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe.config
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.pdb
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csprojAssemblyReference.cache
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.UserInterface.resources
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.Properties.Resources.resources
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csproj.GenerateResource.cache
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csproj.CoreCompileInputs.cache
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.exe
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.pdb
+D:\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe.config
+D:\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe
+D:\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.pdb
+D:\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csprojAssemblyReference.cache
+D:\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.UserInterface.resources
+D:\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.Properties.Resources.resources
+D:\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csproj.GenerateResource.cache
+D:\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csproj.CoreCompileInputs.cache
+D:\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.exe
+D:\systems-mod-ass\SHUpermarket Basic\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.pdb
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarketAdditional\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe.config
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarketAdditional\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarketAdditional\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.pdb
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csprojAssemblyReference.cache
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.UserInterface.resources
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.Properties.Resources.resources
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csproj.GenerateResource.cache
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csproj.CoreCompileInputs.cache
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.exe
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.pdb
+C:\Users\kai19\Desktop\systems-mod-ass\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.PaymentForm.resources
+C:\Users\kai19\Desktop\SHUpermarketAdditional\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe.config
+C:\Users\kai19\Desktop\SHUpermarketAdditional\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe
+C:\Users\kai19\Desktop\SHUpermarketAdditional\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.pdb
+C:\Users\kai19\Desktop\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csprojAssemblyReference.cache
+C:\Users\kai19\Desktop\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.PaymentForm.resources
+C:\Users\kai19\Desktop\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.UserInterface.resources
+C:\Users\kai19\Desktop\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.Properties.Resources.resources
+C:\Users\kai19\Desktop\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csproj.GenerateResource.cache
+C:\Users\kai19\Desktop\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csproj.CoreCompileInputs.cache
+C:\Users\kai19\Desktop\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.exe
+C:\Users\kai19\Desktop\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.pdb
+D:\Users\tyler\Documents - DD\Stuff\NewestShit\SHUpermarketAdditional\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe.config
+D:\Users\tyler\Documents - DD\Stuff\NewestShit\SHUpermarketAdditional\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe
+D:\Users\tyler\Documents - DD\Stuff\NewestShit\SHUpermarketAdditional\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.pdb
+D:\Users\tyler\Documents - DD\Stuff\NewestShit\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csprojAssemblyReference.cache
+D:\Users\tyler\Documents - DD\Stuff\NewestShit\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.PaymentForm.resources
+D:\Users\tyler\Documents - DD\Stuff\NewestShit\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.UserInterface.resources
+D:\Users\tyler\Documents - DD\Stuff\NewestShit\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.Properties.Resources.resources
+D:\Users\tyler\Documents - DD\Stuff\NewestShit\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csproj.GenerateResource.cache
+D:\Users\tyler\Documents - DD\Stuff\NewestShit\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csproj.CoreCompileInputs.cache
+D:\Users\tyler\Documents - DD\Stuff\NewestShit\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.exe
+D:\Users\tyler\Documents - DD\Stuff\NewestShit\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.pdb
+C:\Users\Aiden\Downloads\SHUpermarketAdditional\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe.config
+C:\Users\Aiden\Downloads\SHUpermarketAdditional\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe
+C:\Users\Aiden\Downloads\SHUpermarketAdditional\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.pdb
+C:\Users\Aiden\Downloads\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csprojAssemblyReference.cache
+C:\Users\Aiden\Downloads\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.PaymentForm.resources
+C:\Users\Aiden\Downloads\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.UserInterface.resources
+C:\Users\Aiden\Downloads\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.Properties.Resources.resources
+C:\Users\Aiden\Downloads\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csproj.GenerateResource.cache
+C:\Users\Aiden\Downloads\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csproj.CoreCompileInputs.cache
+C:\Users\Aiden\Downloads\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.exe
+C:\Users\Aiden\Downloads\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.pdb
+C:\Users\Adam\Downloads\SHUpermarketAdditional\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe.config
+C:\Users\Adam\Downloads\SHUpermarketAdditional\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe
+C:\Users\Adam\Downloads\SHUpermarketAdditional\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.pdb
+C:\Users\Adam\Downloads\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csprojAssemblyReference.cache
+C:\Users\Adam\Downloads\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.PaymentForm.resources
+C:\Users\Adam\Downloads\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.UserInterface.resources
+C:\Users\Adam\Downloads\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.Properties.Resources.resources
+C:\Users\Adam\Downloads\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csproj.GenerateResource.cache
+C:\Users\Adam\Downloads\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csproj.CoreCompileInputs.cache
+C:\Users\Adam\Downloads\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.exe
+C:\Users\Adam\Downloads\SHUpermarketAdditional\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.pdb
+C:\Users\adamh\Desktop\Self Checkout Sim\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe.config
+C:\Users\adamh\Desktop\Self Checkout Sim\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe
+C:\Users\adamh\Desktop\Self Checkout Sim\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.pdb
+C:\Users\adamh\Desktop\Self Checkout Sim\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csprojAssemblyReference.cache
+C:\Users\adamh\Desktop\Self Checkout Sim\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.PaymentForm.resources
+C:\Users\adamh\Desktop\Self Checkout Sim\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.UserInterface.resources
+C:\Users\adamh\Desktop\Self Checkout Sim\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.Properties.Resources.resources
+C:\Users\adamh\Desktop\Self Checkout Sim\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csproj.GenerateResource.cache
+C:\Users\adamh\Desktop\Self Checkout Sim\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.csproj.CoreCompileInputs.cache
+C:\Users\adamh\Desktop\Self Checkout Sim\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.exe
+C:\Users\adamh\Desktop\Self Checkout Sim\Self Checkout Simulator\obj\Debug\Self Checkout Simulator.pdb

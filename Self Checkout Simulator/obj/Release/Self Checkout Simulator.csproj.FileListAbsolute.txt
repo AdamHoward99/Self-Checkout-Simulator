@@ -1,0 +1,10 @@
+C:\Users\adamh\Desktop\SHUpermarketAdditional\Self Checkout Simulator\bin\Release\Self Checkout Simulator.exe.config
+C:\Users\adamh\Desktop\SHUpermarketAdditional\Self Checkout Simulator\bin\Release\Self Checkout Simulator.exe
+C:\Users\adamh\Desktop\SHUpermarketAdditional\Self Checkout Simulator\bin\Release\Self Checkout Simulator.pdb
+C:\Users\adamh\Desktop\SHUpermarketAdditional\Self Checkout Simulator\obj\Release\Self_Checkout_Simulator.PaymentForm.resources
+C:\Users\adamh\Desktop\SHUpermarketAdditional\Self Checkout Simulator\obj\Release\Self_Checkout_Simulator.UserInterface.resources
+C:\Users\adamh\Desktop\SHUpermarketAdditional\Self Checkout Simulator\obj\Release\Self_Checkout_Simulator.Properties.Resources.resources
+C:\Users\adamh\Desktop\SHUpermarketAdditional\Self Checkout Simulator\obj\Release\Self Checkout Simulator.csproj.GenerateResource.cache
+C:\Users\adamh\Desktop\SHUpermarketAdditional\Self Checkout Simulator\obj\Release\Self Checkout Simulator.csproj.CoreCompileInputs.cache
+C:\Users\adamh\Desktop\SHUpermarketAdditional\Self Checkout Simulator\obj\Release\Self Checkout Simulator.exe
+C:\Users\adamh\Desktop\SHUpermarketAdditional\Self Checkout Simulator\obj\Release\Self Checkout Simulator.pdb
