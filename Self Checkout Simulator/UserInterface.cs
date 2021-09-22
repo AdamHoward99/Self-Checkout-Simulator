@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Self_Checkout_Simulator
 {
@@ -11,21 +9,13 @@ namespace Self_Checkout_Simulator
         SelfCheckout selfCheckout;
         PaymentForm paymentForm;            //Enables the User interface to get variables used in the Payment form
 
-        // Constructor
-
         public UserInterface()
         {
             InitializeComponent();
-
-            // NOTE: This is where we set up all the objects,
-            // and create the various relationships between them.
-
             paymentForm = new PaymentForm();
             selfCheckout = new SelfCheckout();
             UpdateDisplay();
         }
-
-        // Operations
 
         private void UserScansProduct(object sender, EventArgs e)
         {
@@ -41,8 +31,6 @@ namespace Self_Checkout_Simulator
 
         private void UserPutsProductInBaggingAreaIncorrect(object sender, EventArgs e)
         {
-            // NOTE: We are pretending to put down an item with the wrong weight.
-            // To simulate this we'll use a random number, here's one for you to use.
             selfCheckout.BaggingAreaWeightChanged(false);
             UpdateDisplay(5);
         }
@@ -55,8 +43,6 @@ namespace Self_Checkout_Simulator
 
         private void UserWeighsALooseProduct(object sender, EventArgs e)
         {
-            // NOTE: We are pretending to weigh a banana or whatever here.
-            // To simulate this we'll use a random number, here's one for you to use.
             selfCheckout.LooseItemAreaWeightChanged(new Random().Next(20, 100));
             UpdateDisplay(3);
         }
@@ -72,7 +58,7 @@ namespace Self_Checkout_Simulator
             PaymentForm f2 = new PaymentForm();             //Creates a new form
             f2.ShowDialog();                                //Opens the new form
             selfCheckout.UserPaid();                        //Clears the weight and products from the list
-            UpdateDisplay();
+            UpdateDisplay(10);
         }
 
         private void ScanProductButtonsToggle(bool toggle)      //btnUserScansBarcodeProduct && btnUserSelectsLooseProduct
@@ -87,10 +73,11 @@ namespace Self_Checkout_Simulator
             btnUserPutsProductInBaggingAreaIncorrect.Enabled = toggle;
         }
 
-        private void RemoveAndPayButtonsToggle(bool toggle)     //btnUserChooseToPay && btnRemoveProduct
+        private void RemoveAndPayButtonsToggle(bool toggle)     //btnUserChooseToPay && btnRemoveProduct && btnScanClubcard
         {
             btnUserChooseToPay.Enabled = toggle;
             btnRemoveProduct.Enabled = toggle;
+            btnScanClubcard.Enabled = toggle;
         }
 
         void UpdateDisplay(int state = 0)
@@ -113,7 +100,7 @@ namespace Self_Checkout_Simulator
 
                     BaggingAreaButtonsToggle(true);
 
-                    lbBasket.Items.Add((selfCheckout.GetCurrentProduct().CalculatePrice() * 0.01D).ToString("c2") + " " + selfCheckout.GetCurrentProduct().GetName());
+                    lbBasket.Items.Add((selfCheckout.GetCurrentProduct().CalculatePrice() * 0.01D).ToString("c2") + " " + selfCheckout.GetCurrentProduct().Name);
                     UserPrompt = "Place the item in the bagging area";
                     break;
 
@@ -131,7 +118,7 @@ namespace Self_Checkout_Simulator
 
                     BaggingAreaButtonsToggle(true);
 
-                    lbBasket.Items.Add((selfCheckout.GetCurrentProduct().CalculatePrice() * 0.01D).ToString("c2") + " " + selfCheckout.GetCurrentProduct().GetName());
+                    lbBasket.Items.Add((selfCheckout.GetCurrentProduct().CalculatePrice() * 0.01D).ToString("c2") + " " + selfCheckout.GetCurrentProduct().Name);
                     UserPrompt = "Place the item in the bagging area";
                     break;
 
@@ -175,38 +162,46 @@ namespace Self_Checkout_Simulator
                     UserPrompt = "Scan an item or pay";
                     break;
 
+                case 9:     //Clubcard
+                    ScanProductButtonsToggle(false);
+                    RemoveAndPayButtonsToggle(false);
 
+                    btnUserChooseToPay.Enabled = true;
+                    UserPrompt = "Clubcard points have been saved, Click to pay";
+                    break;
+
+                case 10:    //Pay
+                    RemoveAndPayButtonsToggle(false);
+
+                    ScanProductButtonsToggle(true);
+                    lbBasket.Items.Clear();
+                    lblClubcardPoints.Text = "0";
+                    UserPrompt = "Scan an item";
+                    break;
             }
 
                 //UI Labels
             lblBaggingAreaCurrentWeight.Text = selfCheckout.GetBaggingScale().Weight.ToString("n2");            //Outputs as doubles
-            lblBaggingAreaExpectedWeight.Text = selfCheckout.GetBaggingScale().GetExpectedWeightWithDifference().ToString("n2");
+            lblBaggingAreaExpectedWeight.Text = selfCheckout.GetBaggingScale().ExpectedWeight.ToString("n2");
             lblTotalPrice.Text = selfCheckout.GetTotal().ToString("c2");
             lblScreen.Text = UserPrompt;
-
-            lblClubcardPoints.ResetText();
-            //btnScanClubcard.Enabled = (selfCheckout.IsScaleWeightCorrect() && scannedProducts.HasItems() && !looseItemScale.IsEnabled() && !selfCheckout.CanRemove());
-
         }
 
         private void UserWantsToRemoveItem(object sender, EventArgs e)
         {
-            selfCheckout.EnableAdminRemove();           //Enables the Admin button to remove the product
-            selfCheckout.GetPromptForUser();            //Gets the correct prompt for the current situation
             UpdateDisplay(6);
         }
 
         private void btnAdminRemoveProduct_Click(object sender, EventArgs e)
         {
             selfCheckout.AdminRemoveProduct();          //Removes the last product from the list of products
-            //selfCheckout.DisableAdminRemove();          //Disables the admin remove button        TODO ENABLED VAR MAY NOT BE NEEDED ANYMORE
             UpdateDisplay(7);
         }
 
         private void btnScanClubcard_Click(object sender, EventArgs e)
         {
-            double points = selfCheckout.ClubcardWasSwiped();   
-            lblClubcardPoints.Text = points.ToString(); //Updates the label which holds the amount of clubcard points
+            lblClubcardPoints.Text = Math.Floor(selfCheckout.GetTotal()).ToString();
+            UpdateDisplay(9);
         }
     }
 }

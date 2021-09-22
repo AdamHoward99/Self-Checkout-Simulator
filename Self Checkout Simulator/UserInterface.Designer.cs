@@ -331,9 +331,9 @@ namespace Self_Checkout_Simulator
             this.lblClubcardPoints.AutoSize = true;
             this.lblClubcardPoints.Location = new System.Drawing.Point(6, 16);
             this.lblClubcardPoints.Name = "lblClubcardPoints";
-            this.lblClubcardPoints.Size = new System.Drawing.Size(53, 13);
+            this.lblClubcardPoints.Size = new System.Drawing.Size(13, 13);
             this.lblClubcardPoints.TabIndex = 1;
-            this.lblClubcardPoints.Text = "[POINTS]";
+            this.lblClubcardPoints.Text = "0";
             // 
             // UserInterface
             // 

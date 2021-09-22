@@ -30,14 +30,14 @@
         {
             this.btnPayByCash = new System.Windows.Forms.Button();
             this.btnPayByCard = new System.Windows.Forms.Button();
-            this.btnConfirm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnPayByCash
             // 
-            this.btnPayByCash.Location = new System.Drawing.Point(30, 12);
+            this.btnPayByCash.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnPayByCash.Location = new System.Drawing.Point(125, 23);
             this.btnPayByCash.Name = "btnPayByCash";
-            this.btnPayByCash.Size = new System.Drawing.Size(103, 71);
+            this.btnPayByCash.Size = new System.Drawing.Size(171, 71);
             this.btnPayByCash.TabIndex = 0;
             this.btnPayByCash.Text = "Pay By Cash";
             this.btnPayByCash.UseVisualStyleBackColor = true;
@@ -45,31 +45,21 @@
             // 
             // btnPayByCard
             // 
-            this.btnPayByCard.Location = new System.Drawing.Point(281, 12);
+            this.btnPayByCard.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnPayByCard.Location = new System.Drawing.Point(125, 119);
             this.btnPayByCard.Name = "btnPayByCard";
-            this.btnPayByCard.Size = new System.Drawing.Size(103, 71);
+            this.btnPayByCard.Size = new System.Drawing.Size(171, 71);
             this.btnPayByCard.TabIndex = 1;
             this.btnPayByCard.Text = "Pay By Card";
             this.btnPayByCard.UseVisualStyleBackColor = true;
             this.btnPayByCard.Click += new System.EventHandler(this.btnPayByCard_Click);
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.Enabled = false;
-            this.btnConfirm.Location = new System.Drawing.Point(131, 145);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(153, 41);
-            this.btnConfirm.TabIndex = 2;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // PaymentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(420, 226);
-            this.Controls.Add(this.btnConfirm);
+            this.ControlBox = false;
             this.Controls.Add(this.btnPayByCard);
             this.Controls.Add(this.btnPayByCash);
             this.Name = "PaymentForm";
@@ -82,6 +72,5 @@
 
         private System.Windows.Forms.Button btnPayByCash;
         private System.Windows.Forms.Button btnPayByCard;
-        private System.Windows.Forms.Button btnConfirm;
     }
 }

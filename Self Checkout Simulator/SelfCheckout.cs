@@ -11,13 +11,9 @@ namespace Self_Checkout_Simulator
         private ScannedProducts scannedProducts;
         private LooseItemScale looseItemScale;
         private Product currentProduct;
-        private bool AdminRemove = false;           //To enable the admin to remove a product
         private Product lastScannedProduct;         //The last product that is put on the list, used to remove the product
-        private int lastScannedProductWeight;       //The last products weight, used to accordingly remove the weight from the scale
         private Product[] AddedProductList = new Product[30];   //Collects all products that are scanned by the user, used to know which product to remove
         private int listIndex = 0;                  //Array placer that puts each added product in a new cell of the array
-
-        // Constructor
 
         public SelfCheckout()
         {
@@ -27,7 +23,7 @@ namespace Self_Checkout_Simulator
         }
 
         // Operations
-        public bool ContainsProduct() => scannedProducts.HasItems();
+        public bool ContainsProduct() => scannedProducts.ContainsItems();
 
         public void LooseProductSelected()
         {
@@ -38,8 +34,7 @@ namespace Self_Checkout_Simulator
         public void LooseItemAreaWeightChanged(int weightOfLooseItem)
         {
             looseItemScale.Enabled = false;
-  
-            currentProduct.SetWeight(weightOfLooseItem);
+            currentProduct.Weight = weightOfLooseItem;
             scannedProducts.Add(currentProduct);
             AddedProductList[listIndex] = currentProduct;           //Puts the scanned item in the array
             lastScannedProduct = AddedProductList[listIndex];
@@ -59,7 +54,7 @@ namespace Self_Checkout_Simulator
 
         public void BaggingAreaWeightChanged(bool correctlyWeighed)
         {
-            baggingArea.Weight += correctlyWeighed ? currentProduct.GetWeight() : new Random().Next(20, 100);
+            baggingArea.Weight += correctlyWeighed ? currentProduct.Weight : new Random().Next(20, 100);
             currentProduct = null;
         }
 
@@ -69,49 +64,16 @@ namespace Self_Checkout_Simulator
             baggingArea.Reset();
         }
 
-        public string GetPromptForUser()
-        {
-            if (scannedProducts.HasItems() && baggingArea.IsCorrectWeight() && currentProduct == null && !CanRemove())
-            {
-                return "Scan an item or pay.";
-            }
-            if (baggingArea.IsCorrectWeight() && currentProduct == null && !CanRemove())
-            {
-                return "Scan an item.";
-            }
-            if (looseItemScale.Enabled)
-            {
-                return "Place item on scale.";
-            }
-            if (currentProduct != null && !looseItemScale.Enabled)
-            {
-                return "Place the item in the bagging area.";
-            }
-            if (scannedProducts.HasItems() && !baggingArea.IsCorrectWeight())
-            {
-                return "Please wait, assistant is on the way.";
-            }
-            if(scannedProducts.HasItems() && baggingArea.IsCorrectWeight() && CanRemove())       //If the admin is removing the product from the list
-            {
-                return "Please wait, assistant is on the way.";
-            }
-            return "ERROR: Unknown state!";
-        }
-
-        public Product GetCurrentProduct()
-        {
-            return currentProduct;
-        }
+        public Product GetCurrentProduct() => currentProduct;
 
         public int GetLastScannedProductWeight()        //Gets the weight of the last scanned product
         {
             AddedProductList[listIndex] = AddedProductList[listIndex-1];                //Gets the product before the last scanned product
-            lastScannedProductWeight = AddedProductList[listIndex].GetWeight();         //Gets the weight of the last scanned product
-            return lastScannedProductWeight;
+            return AddedProductList[listIndex].Weight;
         }
 
         public void AdminWeightOverride() => baggingArea.OverrideWeight();
-        public bool IsScaleWeightCorrect() => baggingArea.IsCorrectWeight();
+        bool IsScaleWeightCorrect() => baggingArea.IsCorrectWeight();
 
         public BaggingAreaScale GetBaggingScale() => baggingArea;
         public List<Product> GetProducts() => scannedProducts.GetProducts();
@@ -122,29 +84,8 @@ namespace Self_Checkout_Simulator
         {
             AddedProductList[listIndex] = AddedProductList[listIndex - 1];
             scannedProducts.Remove(AddedProductList[listIndex]);        //Removes the desired product from the list
-            baggingArea.RemoveWeight(AddedProductList[listIndex].GetWeight());       //Removes weight from the scale accordingly
+            baggingArea.RemoveWeight(AddedProductList[listIndex].Weight);       //Removes weight from the scale accordingly
             --listIndex;                                                //Decrements to get the previous array cell and previous scanned product
-        }
-
-        public void EnableAdminRemove()                                 //Initiates when the user presses the remove product button and enables the admin remove button
-        {
-            AdminRemove = true;
-        }
-
-        public void DisableAdminRemove()                                //Once the admin button has been pressed it becomes disabled
-        {
-            AdminRemove = false;
-        }
-
-        public bool CanRemove()                                         //Checks to see if the admin button has been enabled
-        {
-            return AdminRemove;
-        }
-
-        public double ClubcardWasSwiped()
-        {
-            double points = Math.Floor(scannedProducts.CalculatePrice() * 0.01f);   //Converts every £1 spent into 1 Clubcard point
-            return points;
         }
     }
 }

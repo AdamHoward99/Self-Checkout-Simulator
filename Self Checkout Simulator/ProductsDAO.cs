@@ -6,8 +6,6 @@ namespace Self_Checkout_Simulator
 {
     static class ProductsDAO
     {
-        // NOTE: we are creating all the data here. in reality this collection
-        // would be filled with objects based on data loaded from a database 
         private static List<Product> Products = new List<Product>
         {
             // barcode, name, price, weight in grams
@@ -37,22 +35,15 @@ namespace Self_Checkout_Simulator
             new LooseProduct(813432, "Parsnips", 21),
         };
 
-        // NOTE: The following functions are finished, do not change them
-        public static Product SearchUsingBarcode(int barcode)
-        {
-            return Products.Find(p => p.GetBarcode() == barcode);
-        }
+        public static Product SearchUsingBarcode(int barcode) => Products.Find(p => p.Barcode == barcode);
 
         public static Product GetRandomLooseProduct()
         {
-            // filter the products to get only loose items
             var products = Products.Where(p => p.IsLooseProduct()).ToList();
-
-            // pick a random one
             var product = products[new Random().Next(products.Count)] as LooseProduct;
 
             // return a copy of it so we can set the weight of this specific instance
-            return new LooseProduct(product.GetBarcode(), product.GetName(), product.GetPencePer100g());
+            return new LooseProduct(product.Barcode, product.Name, product.Price);
         }
 
         public static int GetRandomProductBarcode()
@@ -61,7 +52,7 @@ namespace Self_Checkout_Simulator
             var products = Products.Where(p => !p.IsLooseProduct()).ToList();
 
             // return a random one
-            return products[new Random().Next(products.Count)].GetBarcode();
+            return products[new Random().Next(products.Count)].Barcode;
         }
     }
 }
