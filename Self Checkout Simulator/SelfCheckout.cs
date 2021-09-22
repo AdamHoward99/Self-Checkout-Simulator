@@ -7,7 +7,6 @@ namespace Self_Checkout_Simulator
     class SelfCheckout
     {
         // Attributes
-
         private BaggingAreaScale baggingArea;
         private ScannedProducts scannedProducts;
         private LooseItemScale looseItemScale;
@@ -20,28 +19,31 @@ namespace Self_Checkout_Simulator
 
         // Constructor
 
-        public SelfCheckout(BaggingAreaScale baggingArea, ScannedProducts scannedProducts, LooseItemScale looseItemScale)
+        public SelfCheckout()
         {
-            this.baggingArea = baggingArea;
-            this.scannedProducts = scannedProducts;
-            this.looseItemScale = looseItemScale;
+            baggingArea = new BaggingAreaScale();
+            scannedProducts = new ScannedProducts();
+            looseItemScale = new LooseItemScale();
         }
 
         // Operations
+        public bool ContainsProduct() => scannedProducts.HasItems();
 
         public void LooseProductSelected()
         {
             currentProduct = ProductsDAO.GetRandomLooseProduct();
-            looseItemScale.Enable();
+            looseItemScale.Enabled = true;
         }
 
         public void LooseItemAreaWeightChanged(int weightOfLooseItem)
         {
+            looseItemScale.Enabled = false;
+  
             currentProduct.SetWeight(weightOfLooseItem);
             scannedProducts.Add(currentProduct);
             AddedProductList[listIndex] = currentProduct;           //Puts the scanned item in the array
-            lastScannedProduct = AddedProductList[listIndex];       
-            baggingArea.SetExpectedWeight(scannedProducts.CalculateWeight());
+            lastScannedProduct = AddedProductList[listIndex];
+            baggingArea.ExpectedWeight = scannedProducts.CalculateWeight();
             ++listIndex;                                            //Increments so any new scanned product is at the next position in the array
         }
 
@@ -51,12 +53,13 @@ namespace Self_Checkout_Simulator
             scannedProducts.Add(currentProduct);
             AddedProductList[listIndex] = currentProduct;           //Puts the scanned item in the array
             lastScannedProduct = AddedProductList[listIndex];
-            baggingArea.SetExpectedWeight(scannedProducts.CalculateWeight());
+            baggingArea.ExpectedWeight = scannedProducts.CalculateWeight();
             ++listIndex;                                            //Increments so any new scanned product is at the next position in the array
         }
 
-        public void BaggingAreaWeightChanged()
+        public void BaggingAreaWeightChanged(bool correctlyWeighed)
         {
+            baggingArea.Weight += correctlyWeighed ? currentProduct.GetWeight() : new Random().Next(20, 100);
             currentProduct = null;
         }
 
@@ -68,27 +71,27 @@ namespace Self_Checkout_Simulator
 
         public string GetPromptForUser()
         {
-            if (scannedProducts.HasItems() && baggingArea.IsWeightOk() && currentProduct == null && !CanRemove())
+            if (scannedProducts.HasItems() && baggingArea.IsCorrectWeight() && currentProduct == null && !CanRemove())
             {
                 return "Scan an item or pay.";
             }
-            if (baggingArea.IsWeightOk() && currentProduct == null && !CanRemove())
+            if (baggingArea.IsCorrectWeight() && currentProduct == null && !CanRemove())
             {
                 return "Scan an item.";
             }
-            if (looseItemScale.IsEnabled())
+            if (looseItemScale.Enabled)
             {
                 return "Place item on scale.";
             }
-            if (currentProduct != null && !looseItemScale.IsEnabled())
+            if (currentProduct != null && !looseItemScale.Enabled)
             {
                 return "Place the item in the bagging area.";
             }
-            if (scannedProducts.HasItems() && !baggingArea.IsWeightOk())
+            if (scannedProducts.HasItems() && !baggingArea.IsCorrectWeight())
             {
                 return "Please wait, assistant is on the way.";
             }
-            if(scannedProducts.HasItems() && baggingArea.IsWeightOk() && CanRemove())       //If the admin is removing the product from the list
+            if(scannedProducts.HasItems() && baggingArea.IsCorrectWeight() && CanRemove())       //If the admin is removing the product from the list
             {
                 return "Please wait, assistant is on the way.";
             }
@@ -100,11 +103,6 @@ namespace Self_Checkout_Simulator
             return currentProduct;
         }
 
-        public void AdminOverrideWeight(BaggingAreaScale ba)
-        {
-            baggingArea = ba;
-        }
-
         public int GetLastScannedProductWeight()        //Gets the weight of the last scanned product
         {
             AddedProductList[listIndex] = AddedProductList[listIndex-1];                //Gets the product before the last scanned product
@@ -112,11 +110,19 @@ namespace Self_Checkout_Simulator
             return lastScannedProductWeight;
         }
 
+        public void AdminWeightOverride() => baggingArea.OverrideWeight();
+        public bool IsScaleWeightCorrect() => baggingArea.IsCorrectWeight();
+
+        public BaggingAreaScale GetBaggingScale() => baggingArea;
+        public List<Product> GetProducts() => scannedProducts.GetProducts();
+
+        public double GetTotal() => scannedProducts.CalculatePrice() * 0.01D;
+
         public void AdminRemoveProduct()                                //Initiates when the admin presses the remove the product button
         {
             AddedProductList[listIndex] = AddedProductList[listIndex - 1];
             scannedProducts.Remove(AddedProductList[listIndex]);        //Removes the desired product from the list
-            baggingArea.RemoveWeight();                                 //Removes weight from the scale accordingly
+            baggingArea.RemoveWeight(AddedProductList[listIndex].GetWeight());       //Removes weight from the scale accordingly
             --listIndex;                                                //Decrements to get the previous array cell and previous scanned product
         }
 

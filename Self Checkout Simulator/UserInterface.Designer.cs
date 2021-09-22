@@ -68,6 +68,7 @@ namespace Self_Checkout_Simulator
             // 
             // btnUserScansBarcodeProduct
             // 
+            this.btnUserScansBarcodeProduct.Enabled = false;
             this.btnUserScansBarcodeProduct.Location = new System.Drawing.Point(6, 91);
             this.btnUserScansBarcodeProduct.Name = "btnUserScansBarcodeProduct";
             this.btnUserScansBarcodeProduct.Size = new System.Drawing.Size(124, 41);
@@ -100,6 +101,7 @@ namespace Self_Checkout_Simulator
             // 
             // btnUserSelectsLooseProduct
             // 
+            this.btnUserSelectsLooseProduct.Enabled = false;
             this.btnUserSelectsLooseProduct.Location = new System.Drawing.Point(136, 91);
             this.btnUserSelectsLooseProduct.Name = "btnUserSelectsLooseProduct";
             this.btnUserSelectsLooseProduct.Size = new System.Drawing.Size(191, 41);
@@ -110,6 +112,7 @@ namespace Self_Checkout_Simulator
             // 
             // btnUserPutsProductInBaggingAreaCorrect
             // 
+            this.btnUserPutsProductInBaggingAreaCorrect.Enabled = false;
             this.btnUserPutsProductInBaggingAreaCorrect.Location = new System.Drawing.Point(6, 185);
             this.btnUserPutsProductInBaggingAreaCorrect.Name = "btnUserPutsProductInBaggingAreaCorrect";
             this.btnUserPutsProductInBaggingAreaCorrect.Size = new System.Drawing.Size(157, 41);
@@ -120,6 +123,7 @@ namespace Self_Checkout_Simulator
             // 
             // btnUserWeighsLooseProduct
             // 
+            this.btnUserWeighsLooseProduct.Enabled = false;
             this.btnUserWeighsLooseProduct.Location = new System.Drawing.Point(136, 138);
             this.btnUserWeighsLooseProduct.Name = "btnUserWeighsLooseProduct";
             this.btnUserWeighsLooseProduct.Size = new System.Drawing.Size(191, 41);
@@ -130,6 +134,7 @@ namespace Self_Checkout_Simulator
             // 
             // btnUserChooseToPay
             // 
+            this.btnUserChooseToPay.Enabled = false;
             this.btnUserChooseToPay.Location = new System.Drawing.Point(6, 232);
             this.btnUserChooseToPay.Name = "btnUserChooseToPay";
             this.btnUserChooseToPay.Size = new System.Drawing.Size(321, 58);
@@ -157,13 +162,14 @@ namespace Self_Checkout_Simulator
             // 
             // btnRemoveProduct
             // 
+            this.btnRemoveProduct.Enabled = false;
             this.btnRemoveProduct.Location = new System.Drawing.Point(6, 139);
             this.btnRemoveProduct.Name = "btnRemoveProduct";
             this.btnRemoveProduct.Size = new System.Drawing.Size(124, 40);
             this.btnRemoveProduct.TabIndex = 2;
             this.btnRemoveProduct.Text = "Remove Product";
             this.btnRemoveProduct.UseVisualStyleBackColor = true;
-            this.btnRemoveProduct.Click += new System.EventHandler(this.btnRemoveProduct_Click);
+            this.btnRemoveProduct.Click += new System.EventHandler(this.UserWantsToRemoveItem);
             // 
             // lblScreen
             // 
@@ -178,6 +184,7 @@ namespace Self_Checkout_Simulator
             // 
             // btnUserPutsProductInBaggingAreaIncorrect
             // 
+            this.btnUserPutsProductInBaggingAreaIncorrect.Enabled = false;
             this.btnUserPutsProductInBaggingAreaIncorrect.Location = new System.Drawing.Point(169, 185);
             this.btnUserPutsProductInBaggingAreaIncorrect.Name = "btnUserPutsProductInBaggingAreaIncorrect";
             this.btnUserPutsProductInBaggingAreaIncorrect.Size = new System.Drawing.Size(157, 41);
@@ -278,6 +285,7 @@ namespace Self_Checkout_Simulator
             // 
             // btnAdminRemoveProduct
             // 
+            this.btnAdminRemoveProduct.Enabled = false;
             this.btnAdminRemoveProduct.Location = new System.Drawing.Point(7, 72);
             this.btnAdminRemoveProduct.Name = "btnAdminRemoveProduct";
             this.btnAdminRemoveProduct.Size = new System.Drawing.Size(147, 46);
@@ -288,6 +296,7 @@ namespace Self_Checkout_Simulator
             // 
             // btnAdminOverridesWeight
             // 
+            this.btnAdminOverridesWeight.Enabled = false;
             this.btnAdminOverridesWeight.Location = new System.Drawing.Point(6, 19);
             this.btnAdminOverridesWeight.Name = "btnAdminOverridesWeight";
             this.btnAdminOverridesWeight.Size = new System.Drawing.Size(148, 47);
@@ -298,6 +307,7 @@ namespace Self_Checkout_Simulator
             // 
             // btnScanClubcard
             // 
+            this.btnScanClubcard.Enabled = false;
             this.btnScanClubcard.Location = new System.Drawing.Point(771, 12);
             this.btnScanClubcard.Name = "btnScanClubcard";
             this.btnScanClubcard.Size = new System.Drawing.Size(89, 254);

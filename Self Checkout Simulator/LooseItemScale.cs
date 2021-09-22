@@ -8,30 +8,8 @@ namespace Self_Checkout_Simulator
     {
         // Attributes
 
-        private SelfCheckout selfCheckout;
-        private bool enabled;
+        public bool Enabled { get; set; }
 
         // Operations
-
-        public void Enable()
-        {
-            enabled = true;
-        }
-
-        public bool IsEnabled()
-        {
-            return enabled;
-        }
-
-        public void LinkToSelfCheckout(SelfCheckout sc)
-        {
-            selfCheckout = sc;
-        }
-
-        public void WeightChangeDetected(int weight)
-        {
-            selfCheckout.LooseItemAreaWeightChanged(weight);
-            enabled = false;
-        }
     }
 }

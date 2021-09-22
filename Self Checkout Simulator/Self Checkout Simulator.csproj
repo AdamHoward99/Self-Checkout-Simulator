@@ -51,7 +51,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaggingAreaScale.cs" />
-    <Compile Include="BarcodeScanner.cs" />
     <Compile Include="LooseItemScale.cs" />
     <Compile Include="PaymentForm.cs">
       <SubType>Form</SubType>

@@ -7,69 +7,32 @@ namespace Self_Checkout_Simulator
     class BaggingAreaScale
     {
         // Attributes
+        public int Weight { get; set; }
+        public int ExpectedWeight { get; set; }
+        private int AllowedWeightDifference { get; set; }
 
-        private int weight;
-        private SelfCheckout selfCheckout;
-        private int expected;
-        private int allowedDifference;
-        private int lastScannedProductWeight;       //Is used to calculate how much weight to remove from the scale
-        
-        
         // Operations
-
-        public int GetCurrentWeight()
-        {
-            return weight;
-        }
-
-        public bool IsWeightOk()
-        {
-            return expected + allowedDifference == weight;
-        }
-
-        public int GetExpectedWeight()
-        {
-            return expected + allowedDifference;
-        }
-
-        public void SetExpectedWeight(int expected)
-        {
-            this.expected = expected;
-        }
+        public bool IsCorrectWeight() => Weight == ExpectedWeight + AllowedWeightDifference;
+        public int GetExpectedWeightWithDifference() => ExpectedWeight + AllowedWeightDifference;
 
         public void OverrideWeight()
         {
-            allowedDifference = weight - expected;
+            AllowedWeightDifference = Weight - ExpectedWeight;
         }
 
-        public void RemoveWeight()      //Removes the weight of a product that has been removed
+        public void RemoveWeight(int lastProductWeight)      //Removes the weight of a product that has been removed
         {
-            lastScannedProductWeight = selfCheckout.GetLastScannedProductWeight();      //Gets the removed products weight
-            weight = expected - lastScannedProductWeight;                               //Sets the scale accordingly
-            expected = expected - lastScannedProductWeight;
-            allowedDifference = 0;
+            Weight = ExpectedWeight - lastProductWeight;                               //Sets the scale accordingly
+            ExpectedWeight = ExpectedWeight - lastProductWeight;
+            AllowedWeightDifference = 0;
         }
 
         public void Reset()
         {
-            int reset = 0;
-            allowedDifference = reset;
-            expected = reset;
-            weight = reset;
+            AllowedWeightDifference = 0;
+            ExpectedWeight = 0;
+            Weight = 0;
         }
 
-        public void LinkToSelfCheckout(SelfCheckout sc)
-        {
-            selfCheckout = sc;
-        }
-
-        // NOTE: In reality the difference wouldn't be passed in here, the
-        //       scale would detect the change and notify the self checkout
-
-        public void WeightChangeDetected(int difference)
-        {
-            weight += difference;
-            selfCheckout.BaggingAreaWeightChanged();
-        }
     }
 }

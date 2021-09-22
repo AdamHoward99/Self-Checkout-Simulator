@@ -14,22 +14,13 @@ namespace Self_Checkout_Simulator
     public partial class PaymentForm : Form
     {
         SelfCheckout selfCheckout;
-        BarcodeScanner barcodeScanner;
         BaggingAreaScale baggingAreaScale;
-        LooseItemScale looseItemScale;
-        ScannedProducts scannedProducts;
 
         public PaymentForm()
         {
             InitializeComponent();
             baggingAreaScale = new BaggingAreaScale();
-            scannedProducts = new ScannedProducts();
-            barcodeScanner = new BarcodeScanner();
-            looseItemScale = new LooseItemScale();
-            selfCheckout = new SelfCheckout(baggingAreaScale, scannedProducts, looseItemScale);
-            barcodeScanner.LinkToSelfCheckout(selfCheckout);
-            baggingAreaScale.LinkToSelfCheckout(selfCheckout);
-            looseItemScale.LinkToSelfCheckout(selfCheckout);
+            selfCheckout = new SelfCheckout();
         }
 
 
