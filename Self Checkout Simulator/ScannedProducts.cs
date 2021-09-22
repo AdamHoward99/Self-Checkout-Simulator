@@ -12,7 +12,8 @@ namespace Self_Checkout_Simulator
         public int CalculatePrice() => products.Sum<Product>((Product p) => p.CalculatePrice());
         public void Reset() => products.Clear();
         public void Add(Product p) => products.Add(p);
-        public void Remove(Product p) => products.Remove(p);
+        public void Remove() => products.RemoveAt(products.Count - 1);
         public bool ContainsItems() => products.Count > 0;
+        public Product GetLastItem() => products[products.Count - 1];
     }
 }

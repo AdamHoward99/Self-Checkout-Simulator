@@ -51,7 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaggingAreaScale.cs" />
-    <Compile Include="LooseItemScale.cs" />
+    <Compile Include="CardInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardInformationForm.Designer.cs">
+      <DependentUpon>CardInformationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PaymentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CardInformationForm.resx">
+      <DependentUpon>CardInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PaymentForm.resx">
       <DependentUpon>PaymentForm.cs</DependentUpon>
     </EmbeddedResource>

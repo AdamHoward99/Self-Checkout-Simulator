@@ -7,7 +7,7 @@ namespace Self_Checkout_Simulator
     {
         // Attributes
         SelfCheckout selfCheckout;
-        PaymentForm paymentForm;            //Enables the User interface to get variables used in the Payment form
+        PaymentForm paymentForm;
 
         public UserInterface()
         {
@@ -55,8 +55,8 @@ namespace Self_Checkout_Simulator
 
         private void UserChoosesToPay(object sender, EventArgs e)
         {
-            PaymentForm f2 = new PaymentForm();             //Creates a new form
-            f2.ShowDialog();                                //Opens the new form
+            PaymentForm payForm = new PaymentForm();             //Creates a new form
+            payForm.ShowDialog();                                //Opens the new form
             selfCheckout.UserPaid();                        //Clears the weight and products from the list
             UpdateDisplay(10);
         }
@@ -180,16 +180,19 @@ namespace Self_Checkout_Simulator
                     break;
             }
 
-                //UI Labels
+            //UI Labels
             lblBaggingAreaCurrentWeight.Text = selfCheckout.GetBaggingScale().Weight.ToString("n2");            //Outputs as doubles
             lblBaggingAreaExpectedWeight.Text = selfCheckout.GetBaggingScale().ExpectedWeight.ToString("n2");
             lblTotalPrice.Text = selfCheckout.GetTotal().ToString("c2");
             lblScreen.Text = UserPrompt;
         }
 
-        private void UserWantsToRemoveItem(object sender, EventArgs e)
+        private void UserWantsToRemoveItem(object sender, EventArgs e) => UpdateDisplay(6);
+
+        private void btnScanClubcard_Click(object sender, EventArgs e)
         {
-            UpdateDisplay(6);
+            lblClubcardPoints.Text = Math.Floor(selfCheckout.GetTotal()).ToString();
+            UpdateDisplay(9);
         }
 
         private void btnAdminRemoveProduct_Click(object sender, EventArgs e)
@@ -198,10 +201,5 @@ namespace Self_Checkout_Simulator
             UpdateDisplay(7);
         }
 
-        private void btnScanClubcard_Click(object sender, EventArgs e)
-        {
-            lblClubcardPoints.Text = Math.Floor(selfCheckout.GetTotal()).ToString();
-            UpdateDisplay(9);
-        }
     }
 }

@@ -95,3 +95,4 @@ C:\Users\adamh\source\repos\AdamHoward99\Self-Checkout-Simulator\Self Checkout S
 C:\Users\adamh\source\repos\AdamHoward99\Self-Checkout-Simulator\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe.config
 C:\Users\adamh\source\repos\AdamHoward99\Self-Checkout-Simulator\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.exe
 C:\Users\adamh\source\repos\AdamHoward99\Self-Checkout-Simulator\Self Checkout Simulator\bin\Debug\Self Checkout Simulator.pdb
+C:\Users\adamh\source\repos\AdamHoward99\Self-Checkout-Simulator\Self Checkout Simulator\obj\Debug\Self_Checkout_Simulator.CardInformationForm.resources
